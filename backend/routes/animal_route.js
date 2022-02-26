@@ -1,9 +1,6 @@
 const express = require("express");
 const Animal = require("../models/house_model");
 const router = express.Router();
-const auth = require("../middleware/auth");
-const sharp = require("sharp");
-const fileUpload = require("express-fileupload");
 
 router.post("/add", async (req, res) => {
   const { city, description, mobile, parent, image } = req.body;
