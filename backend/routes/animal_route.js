@@ -1,11 +1,12 @@
 const express = require("express");
-const Animal = require("../models/house_model");
+const Animal = require("../models/animal_model");
 const router = express.Router();
 
 router.post("/add", async (req, res) => {
-  const { city, description, mobile, parent, image } = req.body;
+  const { city, category, description, mobile, parent, image } = req.body;
   const animal = new Animal({
     city,
+    category,
     description,
     mobile,
     parent,
